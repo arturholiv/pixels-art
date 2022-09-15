@@ -2,7 +2,15 @@ const pixelBoard = document.querySelector('#pixel-board');
 const clearButton = document.querySelector('#clear-board');
 const pixels = document.querySelectorAll('.pixel');
 const colorPalette = document.querySelector('#color-palette');
+const inputNumber =document.querySelector('#entrada');
 
+
+// function generateBoard(size) {
+//   const lines
+//   const columns
+// // }
+
+// generateBoard()
 function selectColor() {
   colorPalette.addEventListener('click', (event) => {
     if (event.target !== colorPalette) {
@@ -14,7 +22,6 @@ function selectColor() {
 }
 selectColor();
 
-
 pixelBoard.addEventListener('click', (event) => {
   const selectedColor = document.querySelector('.selected');
   const computedStyle = getComputedStyle(selectedColor);
@@ -25,8 +32,8 @@ pixelBoard.addEventListener('click', (event) => {
   }
 });
 
-clearButton.addEventListener('click', (event)=>{
-for (const i of pixels) {
+clearButton.addEventListener('click', () => {
+for (let i of pixels) {
   i.style.backgroundColor = 'white';
 }
 });
